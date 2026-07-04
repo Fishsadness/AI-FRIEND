@@ -1,0 +1,25 @@
+{
+  "demo_user_001": {
+    "user_id": "demo_user_001",
+    "consented": true,
+    "consent_date": "2026-07-03T03:04:24.432524",
+    "consent_version": "1.0",
+    "data_processing_purposes": [
+      "对话记忆",
+      "个性化推荐"
+    ],
+    "can_withdraw": true,
+    "withdrawn_date": null
+  },
+  "demo_user": {
+    "user_id": "demo_user",
+    "consented": true,
+    "consent_date": "2026-07-04T18:12:14.806915",
+    "consent_version": "1.0",
+    "data_processing_purposes": [
+      "对话记忆"
+    ],
+    "can_withdraw": true,
+    "withdrawn_date": null
+  }
+}

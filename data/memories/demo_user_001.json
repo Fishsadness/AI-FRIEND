@@ -1,0 +1,118 @@
+[
+  {
+    "memory_id": "mem_9e8190bed2c9",
+    "user_id": "demo_user_001",
+    "content": "用户提到：你好！我下周有一个重要的项目汇报，需要准备PPT。",
+    "memory_type": "event",
+    "source": "user",
+    "confidence": 0.8,
+    "privacy_level": "normal",
+    "tags": [],
+    "created_at": "2026-07-03T02:58:46.411034",
+    "updated_at": "2026-07-03T02:58:46.411034",
+    "version": 1,
+    "is_active": true
+  },
+  {
+    "memory_id": "mem_15122eb8ca41",
+    "user_id": "demo_user_001",
+    "content": "待办：你好！我下周有一个重要的项目汇报，需要准备PPT。",
+    "memory_type": "todo",
+    "source": "user",
+    "confidence": 0.6,
+    "privacy_level": "normal",
+    "tags": [],
+    "created_at": "2026-07-03T02:58:46.413306",
+    "updated_at": "2026-07-03T02:58:46.413306",
+    "version": 1,
+    "is_active": true
+  },
+  {
+    "memory_id": "mem_be8dc2d90af9",
+    "user_id": "demo_user_001",
+    "content": "确实，我最近有在考虑开始跑步锻炼。",
+    "memory_type": "tentative_fact",
+    "source": "agent",
+    "confidence": 0.5,
+    "privacy_level": "normal",
+    "tags": [
+      "drift:您之前提到的目标：待办：你好！我下周有一个重要的项目汇报，需要准备PPT。"
+    ],
+    "created_at": "2026-07-03T02:58:49.430854",
+    "updated_at": "2026-07-03T02:58:49.430854",
+    "version": 1,
+    "is_active": true
+  },
+  {
+    "memory_id": "mem_4cd348852a24",
+    "user_id": "demo_user_001",
+    "content": "会话 ses_686e4c8b 摘要：\n1. 你好！我下周有一个重要的项目汇报，需要准备PPT。\n2. 另外我最近想学瑜伽，有什么建议吗？\n3. 谢谢！我最近压力有点大。\n4. 确实，我最近有在考虑开始跑步锻炼。",
+    "memory_type": "conversation_summary",
+    "source": "system",
+    "confidence": 1.0,
+    "privacy_level": "normal",
+    "tags": [],
+    "created_at": "2026-07-03T02:58:49.438509",
+    "updated_at": "2026-07-03T02:58:49.438509",
+    "version": 1,
+    "is_active": true
+  },
+  {
+    "memory_id": "mem_07a220864592",
+    "user_id": "demo_user_001",
+    "content": "用户提到：你好！我下周有一个重要的项目汇报，需要准备PPT。",
+    "memory_type": "event",
+    "source": "user",
+    "confidence": 0.8,
+    "privacy_level": "normal",
+    "tags": [],
+    "created_at": "2026-07-03T03:04:24.434653",
+    "updated_at": "2026-07-03T03:04:24.434653",
+    "version": 1,
+    "is_active": true
+  },
+  {
+    "memory_id": "mem_42c29fac97ea",
+    "user_id": "demo_user_001",
+    "content": "待办：你好！我下周有一个重要的项目汇报，需要准备PPT。",
+    "memory_type": "todo",
+    "source": "user",
+    "confidence": 0.6,
+    "privacy_level": "normal",
+    "tags": [],
+    "created_at": "2026-07-03T03:04:24.440149",
+    "updated_at": "2026-07-03T03:04:24.440149",
+    "version": 1,
+    "is_active": true
+  },
+  {
+    "memory_id": "mem_f6c17dd32045",
+    "user_id": "demo_user_001",
+    "content": "确实，我最近有在考虑开始跑步锻炼。",
+    "memory_type": "tentative_fact",
+    "source": "agent",
+    "confidence": 0.5,
+    "privacy_level": "normal",
+    "tags": [
+      "drift:您之前提到的目标：待办：你好！我下周有一个重要的项目汇报，需要准备PPT。"
+    ],
+    "created_at": "2026-07-03T03:04:27.463323",
+    "updated_at": "2026-07-03T03:04:27.463323",
+    "version": 1,
+    "is_active": true
+  },
+  {
+    "memory_id": "mem_3964161c8f13",
+    "user_id": "demo_user_001",
+    "content": "会话 ses_7cfe2123 摘要：\n1. 你好！我下周有一个重要的项目汇报，需要准备PPT。\n2. 另外我最近想学瑜伽，有什么建议吗？\n3. 谢谢！我最近压力有点大。\n4. 确实，我最近有在考虑开始跑步锻炼。",
+    "memory_type": "conversation_summary",
+    "source": "system",
+    "confidence": 1.0,
+    "privacy_level": "normal",
+    "tags": [],
+    "created_at": "2026-07-03T03:04:27.484643",
+    "updated_at": "2026-07-03T03:04:27.484643",
+    "version": 1,
+    "is_active": true
+  }
+]

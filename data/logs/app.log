@@ -1,0 +1,76 @@
+2026-07-03 02:58:46,409 [INFO] agent_core: 默认插件已注册
+2026-07-03 02:58:46,409 [INFO] agent_core: AgentCore初始化完成 - 小艾 已就绪
+2026-07-03 02:58:46,416 [INFO] audit: {"event": "conversation", "user_id": "64139c62a0ff112b", "session_id": "ses_686e4c8b", "chain": "passive", "input_summary": "你好！我下周有一个重要的项目汇报，需要准备PPT。", "output_summary": "我理解了。作为您的AI好友，我会一直陪伴您。有什么想聊的都可以告诉我~", "memory_ids": ["mem_9e8190bed2c9", "mem_15122eb8ca41"], "timestamp": "2026-07-03T02:58:46.416632"}
+2026-07-03 02:58:46,416 [INFO] agent_core: 被动链路处理完成 - 用户: demo_user_001, 会话: ses_686e4c8b
+2026-07-03 02:58:47,421 [INFO] audit: {"event": "conversation", "user_id": "64139c62a0ff112b", "session_id": "ses_686e4c8b", "chain": "passive", "input_summary": "另外我最近想学瑜伽，有什么建议吗？", "output_summary": "我理解了。作为您的AI好友，我会一直陪伴您。有什么想聊的都可以告诉我~", "memory_ids": [], "timestamp": "2026-07-03T02:58:47.421179"}
+2026-07-03 02:58:47,424 [INFO] agent_core: 被动链路处理完成 - 用户: demo_user_001, 会话: ses_686e4c8b
+2026-07-03 02:58:48,428 [INFO] audit: {"event": "conversation", "user_id": "64139c62a0ff112b", "session_id": "ses_686e4c8b", "chain": "passive", "input_summary": "谢谢！我最近压力有点大。", "output_summary": "听起来您最近有些疲惫。记得给自己一些喘息的时间，我会一直在这里支持您。", "memory_ids": [], "timestamp": "2026-07-03T02:58:48.428868"}
+2026-07-03 02:58:48,429 [INFO] agent_core: 被动链路处理完成 - 用户: demo_user_001, 会话: ses_686e4c8b
+2026-07-03 02:58:49,430 [INFO] audit: {"event": "conversation", "user_id": "64139c62a0ff112b", "session_id": "ses_686e4c8b", "chain": "drift", "input_summary": "[Drift: 您之前提到的目标：待办：你好！我下周有一个重要的项目汇报，需要准备PPT。]", "output_summary": "我理解了。作为您的AI好友，我会一直陪伴您。有什么想聊的都可以告诉我~", "memory_ids": [], "timestamp": "2026-07-03T02:58:49.430587"}
+2026-07-03 02:58:49,430 [INFO] agent_core: Drift探索触发 - 用户: demo_user_001, 话题: 您之前提到的目标：待办：你好！我下周有一个重要的项目汇报，需要准备PPT。
+2026-07-03 02:58:49,438 [INFO] agent_core: 正在关闭系统...
+2026-07-03 02:58:49,443 [INFO] agent_core: 系统已关闭
+2026-07-03 03:04:24,432 [INFO] agent_core: 默认插件已注册
+2026-07-03 03:04:24,432 [INFO] agent_core: AgentCore初始化完成 - 小艾 已就绪
+2026-07-03 03:04:24,446 [INFO] audit: {"event": "conversation", "user_id": "64139c62a0ff112b", "session_id": "ses_7cfe2123", "chain": "passive", "input_summary": "你好！我下周有一个重要的项目汇报，需要准备PPT。", "output_summary": "我理解了。作为您的AI好友，我会一直陪伴您。有什么想聊的都可以告诉我~", "memory_ids": ["mem_07a220864592", "mem_42c29fac97ea"], "timestamp": "2026-07-03T03:04:24.446498"}
+2026-07-03 03:04:24,446 [INFO] agent_core: 被动链路处理完成 - 用户: demo_user_001, 会话: ses_7cfe2123
+2026-07-03 03:04:25,451 [INFO] audit: {"event": "conversation", "user_id": "64139c62a0ff112b", "session_id": "ses_7cfe2123", "chain": "passive", "input_summary": "另外我最近想学瑜伽，有什么建议吗？", "output_summary": "我理解了。作为您的AI好友，我会一直陪伴您。有什么想聊的都可以告诉我~", "memory_ids": [], "timestamp": "2026-07-03T03:04:25.450968"}
+2026-07-03 03:04:25,451 [INFO] agent_core: 被动链路处理完成 - 用户: demo_user_001, 会话: ses_7cfe2123
+2026-07-03 03:04:26,457 [INFO] audit: {"event": "conversation", "user_id": "64139c62a0ff112b", "session_id": "ses_7cfe2123", "chain": "passive", "input_summary": "谢谢！我最近压力有点大。", "output_summary": "听起来您最近有些疲惫。记得给自己一些喘息的时间，我会一直在这里支持您。", "memory_ids": [], "timestamp": "2026-07-03T03:04:26.457349"}
+2026-07-03 03:04:26,457 [INFO] agent_core: 被动链路处理完成 - 用户: demo_user_001, 会话: ses_7cfe2123
+2026-07-03 03:04:27,461 [INFO] audit: {"event": "conversation", "user_id": "64139c62a0ff112b", "session_id": "ses_7cfe2123", "chain": "drift", "input_summary": "[Drift: 您之前提到的目标：待办：你好！我下周有一个重要的项目汇报，需要准备PPT。]", "output_summary": "我理解了。作为您的AI好友，我会一直陪伴您。有什么想聊的都可以告诉我~", "memory_ids": [], "timestamp": "2026-07-03T03:04:27.461147"}
+2026-07-03 03:04:27,461 [INFO] agent_core: Drift探索触发 - 用户: demo_user_001, 话题: 您之前提到的目标：待办：你好！我下周有一个重要的项目汇报，需要准备PPT。
+2026-07-03 03:04:27,484 [INFO] agent_core: 正在关闭系统...
+2026-07-03 03:04:27,495 [INFO] agent_core: 系统已关闭
+2026-07-03 03:04:39,451 [INFO] agent_core: 默认插件已注册
+2026-07-03 03:04:39,451 [INFO] agent_core: AgentCore初始化完成 - 小艾 已就绪
+2026-07-03 03:12:00,501 [INFO] agent_core: 默认插件已注册
+2026-07-03 03:12:00,501 [INFO] agent_core: AgentCore初始化完成 - 小艾 已就绪
+2026-07-04 10:47:55,844 [INFO] agent_core: 默认插件已注册
+2026-07-04 10:47:55,846 [INFO] agent_core: AgentCore初始化完成 - 小艾 已就绪
+2026-07-04 11:34:48,694 [INFO] agent_core: 默认插件已注册
+2026-07-04 11:34:48,694 [INFO] agent_core: AgentCore初始化完成 - 小艾 已就绪
+2026-07-04 11:35:15,967 [INFO] agent_core: 默认插件已注册
+2026-07-04 11:35:15,967 [INFO] agent_core: AgentCore初始化完成 - 小艾 已就绪
+2026-07-04 11:35:30,658 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T11:35:30.658190"}
+2026-07-04 11:35:30,658 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T11:35:30.658418"}
+2026-07-04 11:35:58,755 [INFO] audit: {"event": "conversation", "user_id": "d74738e262dc4ca9", "session_id": "ses_91e4fad4", "chain": "passive", "input_summary": "你好！我下周有个项目汇报需要准备PPT", "output_summary": "我理解了。作为您的AI好友，我会一直陪伴您。有什么想聊的都可以告诉我~", "memory_ids": ["mem_2d57b9dd240c", "mem_5d5a8a7ac289"], "timestamp": "2026-07-04T11:35:58.755373"}
+2026-07-04 11:35:58,755 [INFO] agent_core: 被动链路处理完成 - 用户: demo_user, 会话: ses_91e4fad4
+2026-07-04 11:36:00,655 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.17, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T11:36:00.655835"}
+2026-07-04 11:36:00,656 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 11:38:39,205 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T11:38:39.205250"}
+2026-07-04 11:38:39,208 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T11:38:39.208566"}
+2026-07-04 11:39:00,859 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T11:39:00.859622"}
+2026-07-04 11:39:00,861 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T11:39:00.861164"}
+2026-07-04 11:41:00,891 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.275, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T11:41:00.891895"}
+2026-07-04 11:41:00,892 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 11:46:30,868 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.275, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T11:46:30.868219"}
+2026-07-04 11:46:30,868 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 11:51:30,879 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.38, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T11:51:30.879180"}
+2026-07-04 11:51:30,879 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 11:57:00,881 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.38, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T11:57:00.881045"}
+2026-07-04 11:57:00,881 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 18:06:31,422 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T18:06:31.422078"}
+2026-07-04 18:06:31,425 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T18:06:31.425328"}
+2026-07-04 18:07:01,441 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.25, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T18:07:01.441723"}
+2026-07-04 18:07:01,442 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 18:09:18,823 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T18:09:18.823759"}
+2026-07-04 18:09:18,827 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T18:09:18.827927"}
+2026-07-04 18:12:14,807 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T18:12:14.807002"}
+2026-07-04 18:12:14,809 [INFO] audit: {"event": "consent_change", "user_id": "d74738e262dc4ca9", "action": "granted", "timestamp": "2026-07-04T18:12:14.809758"}
+2026-07-04 18:12:35,571 [INFO] agent_core: 默认插件已注册
+2026-07-04 18:12:35,572 [INFO] agent_core: AgentCore初始化完成 - 小艾 已就绪
+2026-07-04 18:12:44,808 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.355, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T18:12:44.808201"}
+2026-07-04 18:12:44,808 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 18:13:00,174 [INFO] agent_core: 默认插件已注册
+2026-07-04 18:13:00,175 [INFO] agent_core: AgentCore初始化完成 - 小艾 已就绪
+2026-07-04 18:13:14,828 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.25, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T18:13:14.828184"}
+2026-07-04 18:13:14,829 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 18:18:44,816 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.355, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T18:18:44.816465"}
+2026-07-04 18:18:44,816 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 18:24:14,821 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.355, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T18:24:14.821681"}
+2026-07-04 18:24:14,822 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 18:29:44,808 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.46, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T18:29:44.808933"}
+2026-07-04 18:29:44,809 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-04 18:35:32,060 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.46, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T18:35:32.060849"}
+2026-07-04 18:35:32,061 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
