@@ -32,6 +32,8 @@ interface AppState {
   // 系统
   isConnected: boolean;
   error: string | null;
+  theme: 'auto' | 'light' | 'dark';
+  setTheme: (theme: 'auto' | 'light' | 'dark') => void;
 
   // 操作
   sendMessage: (text: string) => Promise<void>;
@@ -74,6 +76,8 @@ export const useAppStore = create<AppState>((set, get) => ({
   plugins: [],
   isConnected: false,
   error: null,
+  theme: 'auto' as 'auto' | 'light' | 'dark',
+  setTheme: (theme) => set({ theme }),
 
   clearError: () => set({ error: null }),
 

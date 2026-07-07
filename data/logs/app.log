@@ -74,3 +74,5 @@
 2026-07-04 18:29:44,809 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
 2026-07-04 18:35:32,060 [INFO] audit: {"event": "push_decision", "user_id": "d74738e262dc4ca9", "push_type": "event_reminder", "priority_score": 0.76, "cost_score": 0.46, "pushed": true, "message_summary": "没问题，我已经记下了。到时候会提醒您的！", "timestamp": "2026-07-04T18:35:32.060849"}
 2026-07-04 18:35:32,061 [INFO] agent_core: 主动推送触发 - 用户: demo_user, 类型: event_reminder
+2026-07-07 23:05:34,876 [INFO] agent_core: 默认插件已注册
+2026-07-07 23:05:34,877 [INFO] agent_core: AgentCore初始化完成 - 小艾 已就绪

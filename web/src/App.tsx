@@ -14,33 +14,25 @@ export default function App() {
   const error = useAppStore((s) => s.error);
   const clearError = useAppStore((s) => s.clearError);
 
-  // 自动跟随系统主题
   useTheme();
 
-  // 初始化连接
   useEffect(() => {
     checkConnection();
     recordConsent();
   }, [checkConnection, recordConsent]);
 
-  // 定时检查推送（每30秒）
   useEffect(() => {
-    const pushInterval = setInterval(() => {
-      checkPush();
-    }, 30000);
+    const pushInterval = setInterval(() => { checkPush(); }, 30000);
     return () => clearInterval(pushInterval);
   }, [checkPush]);
 
-  // 定时检查Drift（每60秒）
   useEffect(() => {
-    const driftInterval = setInterval(() => {
-      checkDrift();
-    }, 60000);
+    const driftInterval = setInterval(() => { checkDrift(); }, 60000);
     return () => clearInterval(driftInterval);
   }, [checkDrift]);
 
   return (
-    <div className="h-screen flex bg-[#f8f8fa] dark:bg-[#1a1a1f] transition-colors duration-300">
+    <div className="h-screen flex bg-paper dark:bg-earth-950 transition-colors duration-500">
       <Sidebar />
       <main className="flex-1 flex flex-col min-w-0">
         <ChatHeader />
@@ -49,9 +41,9 @@ export default function App() {
       </main>
       {error && (
         <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50">
-          <div className="flex items-center gap-2 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 px-4 py-2.5 rounded-xl shadow-lg text-sm animate-slide-up">
+          <div className="flex items-center gap-2 bg-warm-50 dark:bg-warm-900/30 border border-warm-200 dark:border-warm-800 text-earth-700 dark:text-earth-200 px-4 py-2.5 rounded-organic shadow-sm text-sm animate-slide-up">
             <span>{error}</span>
-            <button onClick={clearError} className="text-red-400 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 font-medium text-xs ml-1">
+            <button onClick={clearError} className="text-warm-400 dark:text-warm-500 hover:text-earth-700 dark:hover:text-earth-300 font-medium text-xs ml-1 transition-colors duration-300">
               关闭
             </button>
           </div>

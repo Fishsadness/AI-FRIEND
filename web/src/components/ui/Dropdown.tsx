@@ -17,7 +17,6 @@ export default function Dropdown({ value, options, onChange, className = '' }: D
   const selected = options.find((o) => o.value === value);
   const label = selected?.label || String(value);
 
-  // 计算弹出位置（基于 trigger 的绝对坐标）
   const updatePosition = useCallback(() => {
     if (triggerRef.current) {
       const rect = triggerRef.current.getBoundingClientRect();
@@ -43,7 +42,6 @@ export default function Dropdown({ value, options, onChange, className = '' }: D
     }
   }, [open, updatePosition]);
 
-  // 点击外部关闭
   useEffect(() => {
     if (!open) return;
     const handleClick = (e: MouseEvent) => {
@@ -69,16 +67,16 @@ export default function Dropdown({ value, options, onChange, className = '' }: D
         ref={triggerRef}
         type="button"
         onClick={() => { updatePosition(); setOpen(!open); }}
-        className={`flex items-center justify-between gap-1 bg-white/[0.04] border border-white/[0.06] rounded-lg px-2.5 py-1.5 text-xs text-white/80 outline-none hover:border-white/[0.15] transition-colors ${className}`}
+        className={`flex items-center justify-between gap-1 bg-white dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-organic px-2.5 py-1.5 text-xs text-earth-700 dark:text-earth-200 outline-none hover:border-earth-300 dark:hover:border-earth-600 transition-colors duration-300 ${className}`}
       >
         <span className="truncate">{label}</span>
-        <ChevronDown size={12} className={`text-white/30 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown size={12} className={`text-earth-400 dark:text-earth-500 transition-transform duration-500 ${open ? 'rotate-180' : ''}`} />
       </button>
 
       {open && (
         <div
           ref={panelRef}
-          className="fixed z-[9999] bg-[#1e1e2a] border border-white/[0.1] rounded-lg shadow-2xl shadow-black/50 py-1 overflow-y-auto max-h-48"
+          className="fixed z-[9999] bg-white dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-organic shadow-sm py-1 overflow-y-auto max-h-48"
           style={{ top: position.top, left: position.left, width: position.width }}
         >
           {options.map((opt) => (
@@ -86,10 +84,10 @@ export default function Dropdown({ value, options, onChange, className = '' }: D
               key={opt.value}
               type="button"
               onClick={() => handleSelect(opt.value)}
-              className={`w-full text-left px-2.5 py-1.5 text-xs transition-colors truncate ${
+              className={`w-full text-left px-2.5 py-1.5 text-xs transition-colors duration-300 truncate ${
                 opt.value === value
-                  ? 'text-amber-400 bg-white/[0.06]'
-                  : 'text-white/60 hover:text-white/85 hover:bg-white/[0.04]'
+                  ? 'text-sage-600 dark:text-sage-400 bg-sage-50 dark:bg-sage-500/10 font-medium'
+                  : 'text-earth-600 dark:text-earth-300 hover:text-earth-800 dark:hover:text-earth-100 hover:bg-earth-50 dark:hover:bg-earth-700'
               }`}
             >
               {opt.label}

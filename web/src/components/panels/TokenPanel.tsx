@@ -35,7 +35,6 @@ export default function TokenPanel() {
   };
   const canNext = year < now.getFullYear() || (year === now.getFullYear() && month < now.getMonth() + 1);
 
-  // 图表计算
   const chartData = useMemo(() => {
     if (!data?.daily) return null;
     const active = data.daily.filter(d => d.total_tokens > 0);
@@ -53,16 +52,14 @@ export default function TokenPanel() {
 
   return (
     <div className="h-full flex flex-col">
-      {/* 头部 */}
-      <div className="px-4 py-4 border-b border-white/[0.06]">
+      <div className="px-4 py-4 border-b border-earth-200 dark:border-earth-800">
         <div className="flex items-center gap-2 mb-3">
-          <Coins size={16} className="text-amber-400" />
-          <h2 className="text-sm font-semibold text-white/90">Token 用量</h2>
+          <Coins size={16} className="text-warm-400" />
+          <h2 className="text-sm font-serif font-semibold text-earth-700 dark:text-earth-200">Token 用量</h2>
         </div>
 
-        {/* 年月选择器 */}
         <div className="flex items-center justify-between">
-          <button onClick={prevMonth} className="p-1 rounded hover:bg-white/[0.06] text-white/40 hover:text-white/70 transition-colors">
+          <button onClick={prevMonth} className="p-1 rounded-full hover:bg-earth-100 dark:hover:bg-earth-700 text-earth-400 dark:text-earth-500 hover:text-earth-600 dark:hover:text-earth-300 transition-colors duration-300">
             <ChevronLeft size={16} />
           </button>
           <div className="flex items-center gap-2">
@@ -82,8 +79,8 @@ export default function TokenPanel() {
           <button
             onClick={nextMonth}
             disabled={!canNext}
-            className={`p-1 rounded transition-colors ${
-              canNext ? 'hover:bg-white/[0.06] text-white/40 hover:text-white/70' : 'text-white/10 cursor-not-allowed'
+            className={`p-1 rounded-full transition-colors duration-300 ${
+              canNext ? 'hover:bg-earth-100 dark:hover:bg-earth-700 text-earth-400 dark:text-earth-500 hover:text-earth-600 dark:hover:text-earth-300' : 'text-earth-200 dark:text-earth-700 cursor-not-allowed'
             }`}
           >
             <ChevronRight size={16} />
@@ -91,43 +88,41 @@ export default function TokenPanel() {
         </div>
       </div>
 
-      {/* 统计卡片 */}
       <div className="px-4 py-3">
         {loading ? (
           <div className="flex items-center justify-center py-8">
-            <div className="w-5 h-5 border-2 border-amber-400/30 border-t-amber-400 rounded-full animate-spin" />
+            <div className="w-5 h-5 border-2 border-warm-400/30 border-t-warm-400 rounded-full animate-spin" />
           </div>
         ) : !data ? (
-          <div className="text-center py-8 text-white/20 text-xs">加载失败</div>
+          <div className="text-center py-8 text-earth-300 dark:text-earth-600 text-xs">加载失败</div>
         ) : (
           <>
             <div className="grid grid-cols-3 gap-2 mb-4">
               <StatCard
-                icon={<Zap size={12} className="text-amber-400" />}
+                icon={<Zap size={12} className="text-warm-400" />}
                 label="总用量"
                 value={formatTokens(data.total)}
-                color="amber"
+                color="warm"
               />
               <StatCard
-                icon={<MessageSquare size={12} className="text-blue-400" />}
+                icon={<MessageSquare size={12} className="text-sage-400" />}
                 label="输入"
                 value={formatTokens(data.total_prompt)}
-                color="blue"
+                color="sage"
               />
               <StatCard
-                icon={<TrendingUp size={12} className="text-emerald-400" />}
+                icon={<TrendingUp size={12} className="text-earth-400" />}
                 label="输出"
                 value={formatTokens(data.total_completion)}
-                color="emerald"
+                color="earth"
               />
             </div>
 
-            {/* SVG柱状图 */}
             {chartData && chartData.active.length > 0 && (
-              <div className="bg-white/[0.02] border border-white/[0.04] rounded-xl p-3">
+              <div className="bg-white dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-organic p-3">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] text-white/30">每日用量趋势</span>
-                  <span className="text-[10px] text-white/20">{chartData.active.length}天</span>
+                  <span className="text-[10px] text-earth-400 dark:text-earth-500">每日用量趋势</span>
+                  <span className="text-[10px] text-earth-300 dark:text-earth-600">{chartData.active.length}天</span>
                 </div>
                 <div className="overflow-x-auto">
                   <svg
@@ -136,20 +131,18 @@ export default function TokenPanel() {
                     viewBox={`0 0 ${chartData.svgWidth} 120`}
                     className="block"
                   >
-                    {/* 网格线 */}
                     {[0, 25, 50, 75, 100].map((pct) => {
                       const y = 110 - (pct / 100) * 100;
                       return (
                         <g key={pct}>
-                          <line x1="0" y1={y} x2={chartData.svgWidth} y2={y} stroke="rgba(255,255,255,0.04)" strokeWidth="0.5" />
-                          <text x="0" y={y - 3} fill="rgba(255,255,255,0.15)" fontSize="8" textAnchor="start">
+                          <line x1="0" y1={y} x2={chartData.svgWidth} y2={y} stroke="rgba(92,64,51,0.06)" strokeWidth="0.5" className="dark:stroke-earth-700" />
+                          <text x="0" y={y - 3} fill="rgba(92,64,51,0.25)" fontSize="8" textAnchor="start" className="dark:fill-earth-500">
                             {formatTokens(Math.round(chartData.maxVal * pct / 100))}
                           </text>
                         </g>
                       );
                     })}
 
-                    {/* 柱状条 */}
                     {chartData.active.map((d, i) => {
                       const x = i * (chartData.barWidth + 2) + 40;
                       const height = d.total_tokens > 0 ? Math.max(2, (d.total_tokens / chartData.maxVal) * 100) : 0;
@@ -158,19 +151,18 @@ export default function TokenPanel() {
 
                       return (
                         <g key={d.date}>
-                          <title>{d.date}: {formatTokens(d.total_tokens)} tokens (输入: {formatTokens(d.prompt_tokens)}, 输出: {formatTokens(d.completion_tokens)})</title>
+                          <title>{d.date}: {formatTokens(d.total_tokens)} tokens</title>
                           <rect
                             x={x}
                             y={y}
                             width={chartData.barWidth}
                             height={height}
-                            rx="1.5"
+                            rx="2"
                             fill="url(#barGrad)"
                             opacity="0.85"
                           />
-                          {/* 每5天或首尾显示日期 */}
                           {(day === 1 || day % 5 === 0 || i === chartData.active.length - 1) && (
-                            <text x={x + chartData.barWidth / 2} y="118" fill="rgba(255,255,255,0.2)" fontSize="7" textAnchor="middle">
+                            <text x={x + chartData.barWidth / 2} y="118" fill="rgba(92,64,51,0.25)" fontSize="7" textAnchor="middle" className="dark:fill-earth-500">
                               {day}
                             </text>
                           )}
@@ -180,8 +172,8 @@ export default function TokenPanel() {
 
                     <defs>
                       <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.9" />
-                        <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.3" />
+                        <stop offset="0%" stopColor="#d4a373" stopOpacity="0.9" />
+                        <stop offset="100%" stopColor="#8b9d77" stopOpacity="0.3" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -189,9 +181,8 @@ export default function TokenPanel() {
               </div>
             )}
 
-            {/* 无数据 */}
             {(!chartData || chartData.active.length === 0) && (
-              <div className="text-center py-6 text-white/15 text-xs">
+              <div className="text-center py-6 text-earth-300 dark:text-earth-600 text-xs">
                 该月暂无使用数据
               </div>
             )}
@@ -206,18 +197,18 @@ function StatCard({ icon, label, value, color }: {
   icon: React.ReactNode;
   label: string;
   value: string;
-  color: 'amber' | 'blue' | 'emerald';
+  color: 'warm' | 'sage' | 'earth';
 }) {
   const borders = {
-    amber: 'border-amber-500/15',
-    blue: 'border-blue-500/15',
-    emerald: 'border-emerald-500/15',
+    warm: 'border-warm-200 dark:border-warm-500/15',
+    sage: 'border-sage-200 dark:border-sage-500/15',
+    earth: 'border-earth-200 dark:border-earth-500/15',
   };
   return (
-    <div className={`bg-white/[0.02] border ${borders[color]} rounded-lg p-2.5 text-center`}>
+    <div className={`bg-white dark:bg-earth-800 border ${borders[color]} rounded-organic p-2.5 text-center`}>
       <div className="flex items-center justify-center gap-1 mb-1">{icon}</div>
-      <p className="text-xs font-semibold text-white/80">{value}</p>
-      <p className="text-[10px] text-white/25">{label}</p>
+      <p className="text-xs font-serif font-semibold text-earth-700 dark:text-earth-200">{value}</p>
+      <p className="text-[10px] text-earth-400 dark:text-earth-500">{label}</p>
     </div>
   );
 }

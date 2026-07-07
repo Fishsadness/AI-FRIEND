@@ -88,7 +88,7 @@ class AppConfig:
     drift: DriftConfig = field(default_factory=DriftConfig)
     agent: AgentConfig = field(default_factory=AgentConfig)
     api_host: str = "0.0.0.0"
-    api_port: int = 8000
+    api_port: int = 8001
     log_level: str = "INFO"
     log_dir: str = str(BASE_DIR / "data" / "logs")
     audit_log_enabled: bool = True

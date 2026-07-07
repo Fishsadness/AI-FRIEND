@@ -13,12 +13,12 @@ export default function Sidebar() {
   if (!sidebarOpen) return null;
 
   return (
-    <aside className="w-[260px] h-full flex flex-col bg-[#0f0f1a] dark:bg-[#0a0a0f] border-r border-white/[0.05] dark:border-white/[0.03] shrink-0 relative transition-colors duration-300">
+    <aside className="w-[260px] h-full flex flex-col bg-earth-800 dark:bg-earth-950 border-r border-earth-700/20 dark:border-earth-800/30 shrink-0 relative transition-colors duration-500">
       <div className="h-full flex flex-col">
         <SidebarNav />
       </div>
       {activePanel !== 'chat' && (
-        <div className="absolute left-full top-0 bottom-0 w-[340px] bg-[#161625] dark:bg-[#0e0e14] border-l border-white/[0.06] dark:border-white/[0.03] z-10 shadow-2xl shadow-black/30 dark:shadow-black/50 flex flex-col animate-slide-in transition-colors duration-300">
+        <div className="absolute left-full top-0 bottom-0 w-[340px] bg-earth-50 dark:bg-earth-900 border-l border-earth-200 dark:border-earth-800 z-10 shadow-sm flex flex-col animate-leaf-in transition-colors duration-500">
           <div className="flex-1 overflow-y-auto">
             {activePanel === 'memory' && <MemoryPanel />}
             {activePanel === 'plugins' && <PluginPanel />}
