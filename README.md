@@ -132,39 +132,6 @@
 
 ---
 
-## 快速开始
-
-### 环境要求
-
-- **Python** 3.9+
-- **Node.js** 18+
-- **npm** 9+
-
-### 安装
-
-```bash
-cd ai-friend-agent
-
-# 安装 Python 依赖
-pip install -r requirements.txt
-
-# 安装前端依赖
-cd web && npm install && cd ..
-```
-
-### 启动
-
-```bash
-# 终端 1 — 启动后端
-python main.py
-# 后端运行在 http://localhost:8001
-# Swagger API 文档：http://localhost:8001/docs
-
-# 终端 2 — 启动前端
-cd web && npm run dev
-# 前端运行在 http://localhost:5173
-```
-
 ### 演示模式
 
 无需配置 API Key 即可体验：
@@ -199,22 +166,7 @@ python demo.py
 | `DELETE` | `/api/agent/consent/{user_id}` | 撤回同意 |
 | `GET` | `/status` | 系统状态 |
 
-### 调用示例
 
-```bash
-curl -X POST http://localhost:8001/api/agent/message \
-  -H "Content-Type: application/json" \
-  -d '{"user_id":"u1","message":"我下周有面试"}'
-
-# 响应
-{
-  "reply": "好的，面试很重要呢！我会在面试前提醒您...",
-  "chain": "passive",
-  "memory_writes": [{"type": "event", "content": "面试准备", "id": "mem_xxx"}],
-  "session_id": "ses_xxx",
-  "timestamp": "2026-07-05T18:00:00"
-}
-```
 
 ---
 
